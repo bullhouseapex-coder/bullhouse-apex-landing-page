@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
 
 const placeholders: { title: string; href: string; description: string }[] = [
   {
@@ -125,7 +126,9 @@ export default function Navbar() {
         </NavigationMenu>
 
         <div className="ml-20 flex gap-2">
-          <Button>Log In</Button>
+          <Button asChild>
+            <Link to={"/dashboard"}>Log In</Link>
+          </Button>
           <Button variant={"secondary"}>Sign Up</Button>
         </div>
       </div>
