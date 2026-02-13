@@ -127,7 +127,7 @@ export default function Navbar() {
 
         <div className="ml-20 flex gap-2">
           <Button asChild>
-            <Link to={"/dashboard"}>Log In</Link>
+            <Link to={"/login"}>Log In</Link>
           </Button>
           <Button variant={"secondary"}>Sign Up</Button>
         </div>
