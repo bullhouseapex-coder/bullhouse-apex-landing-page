@@ -4,10 +4,8 @@ import Section from "@/components/Section";
 function LandingPage() {
   return (
     <section className="min-h-screen">
-      <header className="flex flex-col">
-        <h1 className="text-5xl my-10 font-bold text-center">Bull House Apex Landing Page MVP</h1>
-        <Navbar />
-      </header>
+      <Navbar />
+
       <main className="flex flex-col items-center">
         <Section>
           <h2 className="text-3xl font-bold ">Hero Section</h2>

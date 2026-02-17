@@ -4,7 +4,7 @@ const LoginPage = () => {
   const [activeTab, setActiveTab] = useState<"login" | "register">("login");
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br">
       <div className="w-full max-w-md">
         {/* Card */}
         <div className="bg-white rounded-lg shadow-xl p-8">
