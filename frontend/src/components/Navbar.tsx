@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 ${scrolled ? "border-b py-4 bg-white/90 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"} transition-all duration-300`}
+      className={`fixed w-full top-0 z-20 ${scrolled ? "border-b py-4 bg-white/90 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"} transition-all duration-300`}
     >
       <div className="flex h-16 justify-between items-center px-4 container mx-auto">
         {/* Logo */}

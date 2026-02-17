@@ -1,16 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
+import Hero from "./Hero";
 
 function LandingPage() {
   return (
     <section className="min-h-screen">
       <Navbar />
 
-      <main className="flex flex-col items-center">
-        <Section>
-          <h2 className="text-3xl font-bold ">Hero Section</h2>
-          <p>Hook + main section</p>
-        </Section>
+      <main>
+        <Hero />
 
         <Section>
           <h2 className="text-3xl font-bold ">Value Proposition Section</h2>
