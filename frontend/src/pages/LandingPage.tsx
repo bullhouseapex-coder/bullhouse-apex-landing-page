@@ -5,6 +5,7 @@ import ValueProps from "./ValueProps";
 import HowItWorks from "./HowItWorks";
 import { Pricing } from "./Pricing";
 import { Payouts } from "./Payouts";
+import { Support } from "./Support";
 
 function LandingPage() {
   return (
@@ -22,10 +23,7 @@ function LandingPage() {
 
         <Payouts />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">24/7 Customer Support Section</h2>
-          <p>Reassurance / trust</p>
-        </Section>
+        <Support />
 
         <Section>
           <h2 className="text-3xl font-bold ">Final CTA Section</h2>
