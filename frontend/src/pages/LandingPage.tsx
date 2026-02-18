@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import Hero from "./Hero";
 import ValueProps from "./ValueProps";
 import HowItWorks from "./HowItWorks";
+import { Pricing } from "./Pricing";
 
 function LandingPage() {
   return (
@@ -16,10 +17,7 @@ function LandingPage() {
 
         <HowItWorks />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">Pricing Section / Trading Rules Section</h2>
-          <p>Purpose: Decision making</p>
-        </Section>
+        <Pricing />
 
         <Section>
           <h2 className="text-3xl font-bold ">Payouts</h2>
