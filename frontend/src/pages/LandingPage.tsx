@@ -6,6 +6,7 @@ import HowItWorks from "./HowItWorks";
 import { Pricing } from "./Pricing";
 import { Payouts } from "./Payouts";
 import { Support } from "./Support";
+import { FinalCTA } from "./FinalCTA";
 
 function LandingPage() {
   return (
@@ -25,11 +26,7 @@ function LandingPage() {
 
         <Support />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">Final CTA Section</h2>
-          <p>Conversion push</p>
-          <p>“Start Your Challenge Today” “Get Funded”</p>
-        </Section>
+        <FinalCTA />
 
         <Section>
           <h2 className="text-3xl font-bold ">FAQ Section</h2>
