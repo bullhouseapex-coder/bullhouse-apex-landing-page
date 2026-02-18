@@ -7,6 +7,7 @@ import { Pricing } from "./Pricing";
 import { Payouts } from "./Payouts";
 import { Support } from "./Support";
 import { FinalCTA } from "./FinalCTA";
+import { FAQ } from "./FAQ";
 
 function LandingPage() {
   return (
@@ -28,10 +29,7 @@ function LandingPage() {
 
         <FinalCTA />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">FAQ Section</h2>
-          <p>Objection handling</p>
-        </Section>
+        <FAQ />
 
         <Section>
           <h2 className="text-3xl font-bold ">Footer</h2>
