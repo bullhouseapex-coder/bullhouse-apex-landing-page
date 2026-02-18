@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Section from "@/components/Section";
 import Hero from "./Hero";
 import ValueProps from "./ValueProps";
 import HowItWorks from "./HowItWorks";
@@ -8,6 +7,7 @@ import { Payouts } from "./Payouts";
 import { Support } from "./Support";
 import { FinalCTA } from "./FinalCTA";
 import { FAQ } from "./FAQ";
+import { Footer } from "./Footer";
 
 function LandingPage() {
   return (
@@ -30,14 +30,9 @@ function LandingPage() {
         <FinalCTA />
 
         <FAQ />
-
-        <Section>
-          <h2 className="text-3xl font-bold ">Footer</h2>
-          <p>Company + legal + contact</p>
-        </Section>
       </main>
 
-      <footer></footer>
+      <Footer />
     </section>
   );
 }
