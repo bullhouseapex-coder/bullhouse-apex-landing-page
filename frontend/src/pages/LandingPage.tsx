@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import ValueProps from "./ValueProps";
 import HowItWorks from "./HowItWorks";
 import { Pricing } from "./Pricing";
+import { Payouts } from "./Payouts";
 
 function LandingPage() {
   return (
@@ -19,11 +20,7 @@ function LandingPage() {
 
         <Pricing />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">Payouts</h2>
-          <p>Purpose: How It Works Section</p>
-          <p>Fast & Reliable Rewards</p>
-        </Section>
+        <Payouts />
 
         <Section>
           <h2 className="text-3xl font-bold ">24/7 Customer Support Section</h2>
