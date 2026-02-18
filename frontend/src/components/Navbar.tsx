@@ -1,7 +1,10 @@
+import { useTheme } from "@/context/ThemeContext";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -45,7 +48,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="ml-20 flex gap-2">
+        <div className="ml-20 flex gap-5">
+          <button className="text-slate-900 cursor-pointer hover:text-emerald-500" onClick={() => setTheme(theme == "light" ? "dark" : "light")}>
+            {theme == "light" ? <Moon /> : <Sun />}
+          </button>
+
           <button className="text-sm font-medium text-slate-900 hover:text-emerald-600 transition-colors">
             <Link to={"/login"}>Log In</Link>
           </button>
