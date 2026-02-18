@@ -11,7 +11,7 @@ const plans = [
   { size: "200K", price: 999, target: "8%", dailyDrawdown: "5%", maxDrawdown: "10%", split: "90/10" },
 ];
 
-export function Pricing() {
+export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(plans[2]); // Default to 50K
 
   return (

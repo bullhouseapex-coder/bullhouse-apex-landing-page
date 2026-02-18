@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function FinalCTA() {
+export default function FinalCTA() {
   return (
     <section className="py-24 text-white overflow-hidden relative">
-      <div className="absolute top-0 right-1/2 w-1/3 h-1/3 bg-emerald-500/20 blur-[100px] rounded-full translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-1/2 w-1/3 h-1/3 bg-amber-500/20 blur-[100px] rounded-full -translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute top-1/2 left-1/2 w-1/3 h-1/6 bg-emerald-500/20 blur-[100px] rounded-full  -translate-x-1/2" />
+      <div className="absolute bottom-1/2 left-1/2 w-1/3 h-1/6 bg-amber-500/20 blur-[100px] rounded-full  -translate-x-1/2" />
 
       <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
         <motion.h2

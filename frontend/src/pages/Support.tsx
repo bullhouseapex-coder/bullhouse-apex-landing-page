@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Mail } from "lucide-react";
 
-export function Support() {
+export default function Support() {
   return (
     <section className="py-24 transition-colors duration-300 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-500/5 -skew-x-12 transform origin-top-right translate-x-1/4 pointer-events-none" />

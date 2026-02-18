@@ -1,6 +1,6 @@
 import { Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="text-slate-600 dark:text-slate-400 border-t">
       <div className="container mx-auto px-6 py-24">

@@ -2,6 +2,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/BH-logo.png";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -31,16 +32,24 @@ export default function Navbar() {
     >
       <div className="flex h-16 justify-between items-center px-4 container mx-auto">
         {/* Logo */}
-        <div className="flex flex-col items-center justify-center leading-none">
-          <div className="flex items-center gap-2">
-            <span className="border-2 border-amber-500 px-1.5 py-0.5 text-slate-900 font-bold text-2xl tracking-tight dark:text-slate-300">BULL</span>
-            <span className="text-slate-900 font-bold text-2xl tracking-tight dark:text-slate-300">HOUSE</span>
+        <div className="flex gap-2 cursor-pointer">
+          <div className="w-20 bg-slate-800 rounded p-1 dark:bg-transparent">
+            <img src={logo} className="w-full" alt="logo" />
           </div>
-          <span className="text-[0.65rem] tracking-[0.35em] text-amber-500 font-bold uppercase mt-1">APEX</span>
+          <div className="shrink-0 flex flex-col items-center justify-center leading-none">
+            <div className="flex items-center gap-2">
+              <span className="text-slate-900 font-bold text-2xl tracking-tight dark:text-slate-300">BULL HOUSE</span>
+            </div>
+            <div className="flex w-full text-center items-center gap-2">
+              <div className="grow h-0.5 bg-slate-400"></div>
+              <span className="text-[0.65rem] tracking-[0.35em] text-amber-500 font-bold uppercase">APEX</span>
+              <div className="grow h-0.5 bg-slate-400"></div>
+            </div>
+          </div>
         </div>
 
         {/* Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
               key={link.name}

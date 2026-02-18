@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { DollarSign, Clock, CheckCircle } from "lucide-react";
 
-export function Payouts() {
+export default function Payouts() {
   return (
     <section className="py-24 overflow-hidden">
       <div className="container mx-auto px-6">
