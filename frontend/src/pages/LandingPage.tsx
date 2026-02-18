@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 import Hero from "./Hero";
 import ValueProps from "./ValueProps";
+import HowItWorks from "./HowItWorks";
 
 function LandingPage() {
   return (
@@ -13,10 +14,7 @@ function LandingPage() {
 
         <ValueProps />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">How it Works</h2>
-          <p>Purpose: Reduce confusion</p>
-        </Section>
+        <HowItWorks />
 
         <Section>
           <h2 className="text-3xl font-bold ">Pricing Section / Trading Rules Section</h2>
