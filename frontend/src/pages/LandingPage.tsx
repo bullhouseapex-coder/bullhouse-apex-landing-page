@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Section from "@/components/Section";
 import Hero from "./Hero";
+import ValueProps from "./ValueProps";
 
 function LandingPage() {
   return (
@@ -10,10 +11,7 @@ function LandingPage() {
       <main>
         <Hero />
 
-        <Section>
-          <h2 className="text-3xl font-bold ">Value Proposition Section</h2>
-          <p>Purpose: Why choose your firm</p>
-        </Section>
+        <ValueProps />
 
         <Section>
           <h2 className="text-3xl font-bold ">How it Works</h2>
