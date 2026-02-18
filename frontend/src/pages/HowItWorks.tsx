@@ -32,16 +32,16 @@ const steps: StepDetails[] = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 bg-white">
+    <section id="how-it-works" className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-semibold text-amber-600 uppercase tracking-widest mb-3">Simple Process</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">Your Path to Funding</h3>
+          <h2 className="text-sm font-semibold text-amber-600 dark:text-amber-500 uppercase tracking-widest mb-3">Simple Process</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Your Path to Funding</h3>
         </div>
 
         <div className="relative">
           {/* Connector Line (Desktop) */}
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 z-0">
+          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-800 z-0">
             <div className="absolute top-0 left-0 h-full bg-emerald-500 w-1/4" />
           </div>
 
@@ -55,14 +55,17 @@ export default function HowItWorks() {
                 transition={{ delay: index * 0.2 }}
                 className="text-center group"
               >
-                <div className="w-24 h-24 mx-auto bg-white border-4 border-slate-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-emerald-500 transition-colors duration-300 relative">
+                <div className="w-24 h-24 mx-auto bg-white dark:bg-slate-900 border-4 border-slate-200 dark:border-slate-800 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-emerald-500 dark:group-hover:border-emerald-500 transition-colors duration-300 relative">
                   <span className="absolute -top-2 -right-2 w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-md">
                     {index + 1}
                   </span>
-                  <step.icon size={32} className="text-slate-400 group-hover:text-emerald-500 transition-colors" />
+                  <step.icon
+                    size={32}
+                    className="text-slate-400 dark:text-slate-500 group-hover:text-emerald-500 dark:group-hover:text-emerald-400 transition-colors"
+                  />
                 </div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h4>
-                <p className="text-slate-500 text-sm leading-relaxed px-4">{step.desc}</p>
+                <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{step.title}</h4>
+                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed px-4">{step.desc}</p>
               </motion.div>
             ))}
           </div>

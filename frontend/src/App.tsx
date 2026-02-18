@@ -7,7 +7,7 @@ import { useTheme } from "./context/ThemeContext";
 function App() {
   const { theme } = useTheme();
   return (
-    <div className={`${theme} min-h-screen bg-background text-foreground`}>
+    <div className={`${theme} min-h-screen bg-background text-foreground transition-all duration-300`}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
