@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-20 ${scrolled || isNavOpen ? "py-4 bg-[oklch(0.145_0_0)]/90 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"} transition-all duration-300`}
+      className={`fixed w-full top-0 z-20 py-4 bg-[#0F1115]/95 ${scrolled || isNavOpen ? "py-4 backdrop-blur-md shadow-sm" : "py-6 dark:bg-transparent"} transition-all duration-300`}
     >
       <div className="flex h-16 justify-between items-center px-4 container mx-auto">
         {/* Logo */}
@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>
           <div className="shrink-0 flex flex-col items-center justify-center leading-none">
             <div className="flex items-center gap-2">
-              <a href="/" className="text-slate-300 font-bold text-md sm:text-2xl tracking-tight dark:text-slate-300">
+              <a href="/" className="text-slate-300 font-bold text-md sm:text-2xl tracking-tight ">
                 BULL HOUSE
               </a>
             </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.href}
-              className="text-sm font-medium text-slate-300 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              className="text-sm font-medium text-slate-300  hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
             >
               {link.name}
             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
 
         <div className="flex">
           <button
-            className="mr-2 p-2 rounded-full text-slate-300 dark:text-slate-300 hover:bg-slate-100/30 dark:hover:bg-slate-800 transition-colors"
+            className="mr-2 p-2 rounded-full text-slate-300  hover:bg-slate-100/30 dark:hover:bg-slate-800 transition-colors"
             onClick={() => setTheme(theme == "light" ? "dark" : "light")}
           >
             {theme == "light" ? <Moon /> : <Sun />}
@@ -102,7 +102,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-sm font-medium text-slate-300 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                className="text-sm font-medium text-slate-300  hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
                 {link.name}
               </Link>

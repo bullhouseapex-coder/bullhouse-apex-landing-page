@@ -22,7 +22,7 @@ export const useTheme = () => {
   return context;
 };
 
-export const ThemeProvider = ({ children, defaultTheme = "dark" }: ThemeProviderProp) => {
+export const ThemeProvider = ({ children, defaultTheme = "light" }: ThemeProviderProp) => {
   const [theme, setTheme] = useState<Theme>(() => {
     const storedTheme = localStorage.getItem("theme");
 

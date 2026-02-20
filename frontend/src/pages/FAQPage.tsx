@@ -20,8 +20,8 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* FAQ Component */}
-      <section className="container mx-auto px-6 mb-20">
+      {/* FAQ Component: Temporary Dark Always */}
+      <section className="dark container mx-auto px-6 mb-20">
         <FAQ />
       </section>
 

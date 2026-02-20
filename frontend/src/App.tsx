@@ -14,7 +14,9 @@ function App() {
   const { theme } = useTheme();
   return (
     <>
-      <Navbar />
+      <header className={`${theme}`}>
+        <Navbar />
+      </header>
       <main className={`${theme} min-h-screen bg-background text-foreground transition-all duration-300`}>
         <Routes>
           <Route path="/" element={<LandingPage />} />

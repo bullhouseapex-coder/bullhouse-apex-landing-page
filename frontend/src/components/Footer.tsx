@@ -3,7 +3,7 @@ import logo from "../assets/BH-logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[oklch(0.145_0_0)]/90 text-slate-400 border-t">
+    <footer className="bg-slate-900 text-slate-400 border-t border-slate-800">
       <div className="container mx-auto px-6 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className=" py-8 text-xs bg-[oklch(0.145_0_0)] text-slate-400 text-center px-6">
+      <div className=" py-8 text-xs bg-slate-950 text-slate-400 text-center px-6">
         <p className="mb-4 max-w-4xl mx-auto">
           Risk Disclosure: Trading financial markets involves a high level of risk and may not be suitable for all investors. Bull House Apex provides
           simulated trading accounts and educational services. All trading activities occur in a simulated environment. Any performance results are
