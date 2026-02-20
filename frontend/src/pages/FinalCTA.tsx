@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 text-white overflow-hidden relative">
-      <div className="absolute top-1/2 left-1/2 w-1/3 h-1/6 bg-emerald-500/20 blur-[100px] rounded-full  -translate-x-1/2" />
-      <div className="absolute bottom-1/2 left-1/2 w-1/3 h-1/6 bg-amber-500/20 blur-[100px] rounded-full  -translate-x-1/2" />
+    <section className="py-24 bg-slate-900 text-white dark:bg-transparent overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-emerald-500/20 blur-[100px] rounded-full translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-amber-500/20 blur-[100px] rounded-full -translate-y-1/2 -translate-x-1/2" />
 
       <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
         <motion.h2
@@ -13,7 +13,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl text-slate-900 dark:text-white font-bold mb-6 tracking-tight leading-tight"
+          className="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight"
         >
           Ready to Start Your <span className="text-amber-500">Trading Career?</span>
         </motion.h2>
@@ -23,7 +23,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto"
+          className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto"
         >
           Join thousands of funded traders and take your portfolio to the next level. No more risking your own capital.
         </motion.p>
@@ -39,7 +39,7 @@ export default function FinalCTA() {
             Start Challenge Now
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <button className="bg-transparent border border-slate-700 hover:border-slate-500 text-slate-700 dark:text-white px-8 py-4 rounded-xl text-lg font-bold transition-all">
+          <button className="bg-transparent border border-slate-700 hover:border-slate-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all">
             Join Discord Community
           </button>
         </motion.div>

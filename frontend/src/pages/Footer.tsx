@@ -1,18 +1,26 @@
 import { Twitter, Instagram, Linkedin, MapPin, Mail } from "lucide-react";
+import logo from "../assets/BH-logo.png";
 
 export default function Footer() {
   return (
-    <footer className="text-slate-600 dark:text-slate-400 border-t">
+    <footer className="bg-[oklch(0.145_0_0)]/90 text-slate-400 border-t">
       <div className="container mx-auto px-6 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-2 mb-6 text-slate-900 dark:text-white">
-              <div className="w-8 h-8 bg-emerald-500 rounded-sm flex items-center justify-center">
-                <div className="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-10 border-b-white" />
+            <div className="flex gap-2 cursor-pointer mb-6">
+              <div className="w-20 drop-shadow-xs drop-shadow-black rounded p-1 dark:bg-transparent">
+                <img src={logo} className="w-full" alt="logo" />
               </div>
-              <span className="text-xl font-bold tracking-tight">
-                BULL HOUSE <span className="text-emerald-500">APEX</span>
-              </span>
+              <div className="shrink-0 flex flex-col items-center justify-center leading-none">
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-300 font-bold text-2xl tracking-tight dark:text-slate-300">BULL HOUSE</span>
+                </div>
+                <div className="flex w-full text-center items-center gap-2">
+                  <div className="grow h-0.5 bg-slate-400"></div>
+                  <span className="text-[0.65rem] tracking-[0.35em] text-amber-500 font-bold uppercase">APEX</span>
+                  <div className="grow h-0.5 bg-slate-400"></div>
+                </div>
+              </div>
             </div>
             <p className="text-sm leading-relaxed mb-6 max-w-xs">
               Bull House Apex is a premium proprietary trading firm empowering traders worldwide with capital and technology.
@@ -20,19 +28,19 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full text-slate-700 bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
               >
                 <Twitter size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full text-slate-700 bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
+                className="w-10 h-10 rounded-full text-slate-700 bg-slate-300 dark:bg-slate-800 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
               >
                 <Linkedin size={18} />
               </a>
@@ -40,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-slate-900 dark:text-white font-bold mb-6">Programs</h4>
+            <h4 className="text-white font-bold mb-6">Programs</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a href="#" className="hover:text-emerald-400 transition-colors">
@@ -71,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-slate-900 dark:text-white font-bold mb-6">Support</h4>
+            <h4 className="text-white font-bold mb-6">Support</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a href="#" className="hover:text-emerald-400 transition-colors">
@@ -102,7 +110,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-slate-900 dark:text-white font-bold mb-6">Contact</h4>
+            <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-emerald-500 mt-0.5 shrink-0" />
@@ -125,7 +133,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className=" py-8 text-xs text-slate-600 text-center px-6">
+      <div className=" py-8 text-xs bg-[oklch(0.145_0_0)] text-slate-400 text-center px-6">
         <p className="mb-4 max-w-4xl mx-auto">
           Risk Disclosure: Trading financial markets involves a high level of risk and may not be suitable for all investors. Bull House Apex provides
           simulated trading accounts and educational services. All trading activities occur in a simulated environment. Any performance results are
