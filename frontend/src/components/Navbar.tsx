@@ -1,5 +1,5 @@
 import { useTheme } from "@/context/ThemeContext";
-import { Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/BH-logo.png";
@@ -7,6 +7,7 @@ import logo from "../assets/BH-logo.png";
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,19 +27,25 @@ export default function Navbar() {
     { name: "FAQ", href: "#faq" },
   ];
 
+  const handleOpenNavbar = () => {
+    setIsNavOpen((prev) => !prev);
+  };
+
   return (
     <nav
-      className={`fixed w-full top-0 z-20 ${scrolled ? "py-4 bg-[oklch(0.145_0_0)]/90 backdrop-blur-md shadow-sm dark:bg-background/90" : "py-6 bg-transparent"} transition-all duration-300`}
+      className={`fixed w-full top-0 z-20 ${scrolled || isNavOpen ? "py-4 bg-[oklch(0.145_0_0)]/90 backdrop-blur-md shadow-sm" : "py-6 bg-transparent"} transition-all duration-300`}
     >
       <div className="flex h-16 justify-between items-center px-4 container mx-auto">
         {/* Logo */}
         <div className="flex gap-2 cursor-pointer">
-          <div className="w-20 drop-shadow-xs drop-shadow-black rounded p-1 dark:bg-transparent">
+          <div className="w-16 sm:w-20 drop-shadow-xs drop-shadow-black rounded p-1 dark:bg-transparent">
             <img src={logo} className="w-full" alt="logo" />
           </div>
           <div className="shrink-0 flex flex-col items-center justify-center leading-none">
             <div className="flex items-center gap-2">
-              <span className="text-slate-300 font-bold text-2xl tracking-tight dark:text-slate-300">BULL HOUSE</span>
+              <a href="/" className="text-slate-300 font-bold text-md sm:text-2xl tracking-tight dark:text-slate-300">
+                BULL HOUSE
+              </a>
             </div>
             <div className="flex w-full text-center items-center gap-2">
               <div className="grow h-0.5 bg-slate-400"></div>
@@ -48,7 +55,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -61,20 +68,55 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="ml-20 flex gap-5">
+        <div className="flex">
           <button
-            className="p-2 rounded-full text-slate-300 dark:text-slate-300 hover:bg-slate-100/30 dark:hover:bg-slate-800 transition-colors"
+            className="mr-2 p-2 rounded-full text-slate-300 dark:text-slate-300 hover:bg-slate-100/30 dark:hover:bg-slate-800 transition-colors"
             onClick={() => setTheme(theme == "light" ? "dark" : "light")}
           >
             {theme == "light" ? <Moon /> : <Sun />}
           </button>
 
-          <button className="text-sm font-medium text-slate-300 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-            <Link to={"/login"}>Log In</Link>
-          </button>
-          <button className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-amber-500/20bg-amber-500">
-            Start a Challenge
-          </button>
+          {/* Login & Challenge Button */}
+          <div className="hidden lg:flex gap-5">
+            <button className="text-sm font-medium text-slate-300 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <Link to={"/login"}>Log In</Link>
+            </button>
+            <button className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-amber-500/20bg-amber-500">
+              Start a Challenge
+            </button>
+          </div>
+
+          <div className="lg:hidden flex items-center">
+            <button onClick={handleOpenNavbar} className="text-white p-2">
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet & Mobile Navigation */}
+      <div className={`${isNavOpen ? "h-100" : "h-0"} transition-all duration-300 overflow-hidden block lg:hidden`}>
+        <div className="p-8 flex flex-col h-full">
+          <div className="flex flex-col gap-6">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-slate-300 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex flex-col gap-5 mt-auto">
+            <button className="text-sm font-medium text-slate-300 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+              <Link to={"/login"}>Log In</Link>
+            </button>
+            <button className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-amber-500/20bg-amber-500">
+              Start a Challenge
+            </button>
+          </div>
         </div>
       </div>
     </nav>
