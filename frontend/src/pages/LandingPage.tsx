@@ -11,22 +11,16 @@ import Footer from "../components/Footer";
 
 function LandingPage() {
   return (
-    <section className="min-h-screen">
-      <Navbar />
-
-      <main>
-        <Hero />
-        <ValueProps />
-        <HowItWorks />
-        <Pricing />
-        <Payouts />
-        <Support />
-        <FinalCTA />
-        <FAQ />
-      </main>
-
-      <Footer />
-    </section>
+    <>
+      <Hero />
+      <ValueProps />
+      <HowItWorks />
+      <Pricing />
+      <Payouts />
+      <Support />
+      <FinalCTA />
+      <FAQ />
+    </>
   );
 }
 

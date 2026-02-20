@@ -20,11 +20,11 @@ export default function Navbar() {
   }, []);
 
   const NAV_LINKS = [
-    { name: "Programs", href: "#programs" },
-    { name: "How it Works", href: "#how-it-works" },
-    { name: "About Us", href: "#about-us" },
-    { name: "Blog", href: "#blog" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Programs", href: "/" },
+    { name: "How it Works", href: "/how-it-works" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Blog", href: "/blog" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   const handleOpenNavbar = () => {
@@ -58,13 +58,13 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="text-sm font-medium text-slate-300 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -99,13 +99,13 @@ export default function Navbar() {
         <div className="p-8 flex flex-col h-full">
           <div className="flex flex-col gap-6">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-slate-300 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
