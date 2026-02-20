@@ -1,13 +1,13 @@
 import Navbar from "@/components/Navbar";
-import Hero from "./Hero";
-import ValueProps from "./ValueProps";
-import HowItWorks from "./HowItWorks";
-import Pricing from "./Pricing";
-import Payouts from "./Payouts";
-import Support from "./Support";
-import FinalCTA from "./FinalCTA";
-import FAQ from "./FAQ";
-import Footer from "./Footer";
+import Hero from "../components/Hero";
+import ValueProps from "../components/ValueProps";
+import HowItWorks from "../components/HowItWorks";
+import Pricing from "../components/Pricing";
+import Payouts from "../components/Payouts";
+import Support from "../components/Support";
+import FinalCTA from "../components/FinalCTA";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 
 function LandingPage() {
   return (
@@ -16,19 +16,12 @@ function LandingPage() {
 
       <main>
         <Hero />
-
         <ValueProps />
-
         <HowItWorks />
-
         <Pricing />
-
         <Payouts />
-
         <Support />
-
         <FinalCTA />
-
         <FAQ />
       </main>
 
