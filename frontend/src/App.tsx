@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { useTheme } from "./context/ThemeContext";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
-import { useTheme } from "./context/ThemeContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const { theme } = useTheme();
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </main>
       <Footer />
